@@ -1,0 +1,23 @@
+package step2;
+
+import java.util.Scanner;
+
+public class Boj14681 {
+    public static void main(String [] args){
+        
+        // boj_14681
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+
+        if(x>0){
+            if(y>0) System.out.print(1);
+            else if(y<0) System.out.print(4);
+        }
+        else if(x<0){
+            if(y>0) System.out.print(2);
+            else if(y<0) System.out.print(3);
+        }
+
+    }
+}
