@@ -7,25 +7,29 @@ import java.util.Scanner;
 
 public class Boj11729 {
 	
-	static int N;
+	static int cnt = 0;
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	
+	public static void hanoi(int N, int from, int temp, int to) throws IOException {
+		
+		if(N == 1) {
+			cnt++;
+			bw.write(from + " " + to + "\n");
+			return;
+		}
+		
+		hanoi(N-1, from, to, temp);
+		hanoi(1, from, temp, to);
+		hanoi(N-1, temp, from, to);
+	}
+
 	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		N = sc.nextInt();
+		int N = sc.nextInt();
 		System.out.println((int)Math.pow(2, N) - 1);
-		hanoi(1,2,3,N);
+		hanoi(N,1,2,3);
 		bw.flush();
 	}
 
-	public static void hanoi(int a, int b, int c, int N) throws IOException {
-		if(N == 1) {
-			bw.write(a + " " + c + "\n");
-		}
-		else {
-			hanoi(a, c, b, N-1);
-			bw.write(a + " " + c + "\n");
-			hanoi(b, a, c, N-1);
-		}
-	}
 }
