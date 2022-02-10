@@ -5,7 +5,6 @@ import java.util.Scanner;
 class Solution {
 
 	static int[][] room = new int[1001][1001];
-	//static boolean[][] check = new boolean[1001][1001];
 	static int number, max_room, N;
 
 	static int[] xx = { -1, 1, 0, 0 };
@@ -41,7 +40,7 @@ class Solution {
 
 	public static void dfs(int x, int y, int cnt, int start) {
 		// 갈 수 있는 곳이 아무 곳도 없으면 자동으로 끝날 것이고 그 순간에 값 검사하기
-		boolean go = false;
+		boolean go = false; // false: 여기서 갈 곳이 없다, true: 여기서 갈 곳이 있다
 
 		for (int i = 0; i < xx.length; i++) {
 
@@ -51,6 +50,8 @@ class Solution {
 			// 정말 아무 생각 없이 실행시킨 dfs
 			if (inRange(x_, y_) && room[x_][y_] - room[x][y] == 1) {
 				dfs(x_, y_, cnt + 1, start);
+				go = true;
+				break; // 숫자가 다 다른데 이동 할 수 있었으면 다른건 볼 필요도 없다
 			}
 		}
 
