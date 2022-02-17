@@ -1,9 +1,9 @@
-package bfs.example;
+package bfs;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Boj20304 {
+public class MyExample1 {
 
 	public static void main(String[] args) {
 		
