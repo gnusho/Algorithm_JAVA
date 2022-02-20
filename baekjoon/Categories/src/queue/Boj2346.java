@@ -53,8 +53,6 @@ public class Boj2346 {
 			sb.append(now + 1).append(" ");
 		}
 		
-		//for(int i = 0; i < N; i++) sb.append(!check[i]? i + 1: "");
-		
 		System.out.println(sb.toString());
 	}
 
