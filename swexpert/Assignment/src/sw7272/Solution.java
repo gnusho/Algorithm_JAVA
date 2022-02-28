@@ -19,7 +19,7 @@ public class Solution {
 		}
 	}
 
-	private static boolean compare(String a, String b) {
+	private static boolean compare (String a, String b) {
 		
 		if(a.length() != b.length()) return false;
 		
