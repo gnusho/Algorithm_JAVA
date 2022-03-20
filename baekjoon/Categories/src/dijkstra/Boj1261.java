@@ -1,9 +1,7 @@
 package dijkstra;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.PriorityQueue;
+import java.io.*;
+import java.util.*;
 
 public class Boj1261 {
 
