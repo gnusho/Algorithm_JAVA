@@ -1,4 +1,4 @@
-package 실습4;
+package 실습04;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package 과제2;
+package 과제02;
 
 import java.io.BufferedReader;
 import java.io.IOException;
